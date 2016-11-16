@@ -87,17 +87,29 @@
                         <hr>
                         <h3>Build</h3>
                         <div class="form-group">
+                            {!! Form::label('Build Start Date') !!}
+                            {!! Form::date('bl_startdate', \Carbon\Carbon::now(), array('class' => 'form-control', 'value'=>'{{ old("bl_startdate") }}')) !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Build End Date') !!}
+                            {!! Form::date('bl_enddate', \Carbon\Carbon::now(), array('class' => 'form-control', 'value'=>'{{ old("bl_enddate") }}')) !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Assignees') !!}
+                            {!! Form::text('bl_assignees', null, array('class'=>'form-control', 'placeholder'=>'Assignees', 'value'=>'{{ old("bl_assignees") }}')) !!}
+                        </div>
+                        <div class="form-group">
                             {!! Form::label('Instructions') !!}
                             {!! Form::textarea('bl_instructions', null, array('class' => 'form-control', 'size' => '30x4', 'value'=>'{{ old("bl_instructions") }}')) !!}
                         </div>
                         <hr>
                         <h3>Test</h3>
                         <div class="form-group">
-                            {!! Form::label('Experiment Start Date') !!}
+                            {!! Form::label('Test Start Date') !!}
                             {!! Form::date('ts_startdate', \Carbon\Carbon::now(), array('class' => 'form-control', 'value'=>'{{ old("ts_startdate") }}')) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('Experiment End Date') !!}
+                            {!! Form::label('Test End Date') !!}
                             {!! Form::date('ts_enddate', \Carbon\Carbon::now(), array('class' => 'form-control', 'value'=>'{{ old("ts_enddate") }}')) !!}
                         </div>
                         <hr>
