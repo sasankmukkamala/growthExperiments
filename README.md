@@ -10,7 +10,7 @@ Nice to watch: [Building a Growth Machine](http://www.heavybit.com/library/video
 
 ## Preview ##
 
-![Preview](http://i.imgur.com/jvD27sQ.png)
+![Preview](http://i.imgur.com/PrTjIbn.png)
 
 ## Installation ##
 
@@ -51,12 +51,6 @@ test
 ## Official Laravel 5.3 Documentation
 
 Documentation for the Laravel 5.3 framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Task List ##
-
-- [x] Archive feature
-- [x] Search Experiments
-- [ ] Add attachments to Experiment
 
 ## Copyleft and License
 
