@@ -30,7 +30,7 @@ class ExperimentController extends Controller
     public function index()
     {
         $experiments = Experiment::where('archived', '=', false)
-                                    ->orderBy('pr_priority', 'desc')
+                                    ->orderBy('pr_priority', 'asc')
                                     ->orderBy('phase', 'asc')
                                     ->orderBy('due_date', 'asc')
                                     ->paginate(10);
@@ -49,7 +49,7 @@ class ExperimentController extends Controller
 
         $experiments = Experiment::where('name', 'like', '%'.$search.'%')
                                     ->orWhere('tags', 'like', '%'.$search.'%')
-                                    ->orderBy('pr_priority', 'desc')
+                                    ->orderBy('pr_priority', 'asc')
                                     ->orderBy('phase', 'asc')
                                     ->orderBy('due_date', 'asc')
                                     ->paginate(10);
