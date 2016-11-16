@@ -33,7 +33,7 @@ class ExperimentController extends Controller
                                     ->orderBy('pr_priority', 'asc')
                                     ->orderBy('phase', 'asc')
                                     ->orderBy('due_date', 'asc')
-                                    ->paginate(10);
+                                    ->paginate(5);
 
         return view('experiments/list')->with('experiments', $experiments);
     }
@@ -52,7 +52,7 @@ class ExperimentController extends Controller
                                     ->orderBy('pr_priority', 'asc')
                                     ->orderBy('phase', 'asc')
                                     ->orderBy('due_date', 'asc')
-                                    ->paginate(10);
+                                    ->paginate(5);
 
         return view('experiments/search')->with('experiments', $experiments);
     }
@@ -68,7 +68,7 @@ class ExperimentController extends Controller
                                  ->orderBy('pr_priority', 'desc')
                                  ->orderBy('phase', 'asc')
                                  ->orderBy('due_date', 'asc')
-                                 ->paginate(10);
+                                 ->paginate(5);
 
         return view('experiments/archived')->with('experiments', $experiments);
     }
