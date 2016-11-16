@@ -37,7 +37,7 @@
                                     <a href="/experiments/edit/{{ $experiment->id }}" />{{ $experiment->name }}</a>
                                 </td>
                                 <td>{{ $experiment->getPhase($experiment->phase) }}</td>
-                                <td>{{ $experiment->getPriority($experiment->pr_priority) }}</td>
+                                <td><span class="label label-{{ $experiment->getPriorityLabel($experiment->pr_priority) }}">{{ $experiment->getPriority($experiment->pr_priority) }}</span></td>
                                 <td>{{ $experiment->creator->name }}</td>
                                 <td>{{ $experiment->due_date }}</td>
                                 <td>

@@ -5782,4 +5782,7 @@ button.close {
 .navbar .input-group {
   padding-top: 7px; }
 
+.pagination {
+  margin: 0px 0 !important; }
+
 /*# sourceMappingURL=app.css.map */

@@ -36,6 +36,12 @@ class Experiment extends Model
                                         4 => 'Low priority',
                                         5 => 'Unknown');
 
+    private static $priorityLabels = array( 1 => 'danger',
+                                            2 => 'warning',
+                                            3 => 'info',
+                                            4 => 'primary',
+                                            5 => 'default');
+
     /**
      * Get the creator of the experiment.
      */
@@ -90,6 +96,14 @@ class Experiment extends Model
     public function getPriority($priority)
     {
         return self::$priorities[$priority];
+    }
+
+    /**
+     * Get current experiment phase label.
+     */
+    public function getPriorityLabel($priority)
+    {
+        return self::$priorityLabels[$priority];
     }
 
     /**
