@@ -12,7 +12,7 @@ class Experiment extends Model
      *
      * @var array
      */
-    protected $fillable = ['creator_id','name','tags','phase','due_date','bs_metric','bs_goal','bs_impact','bs_confidence','bs_effort','bs_results','pr_priority','bl_instructions','ts_startdate','ts_enddate','al_results_quantitative','al_goal_achieved','al_results','al_learnings'];
+    protected $fillable = ['creator_id','name','tags','phase','due_date','bs_metric','bs_goal','bs_impact','bs_confidence','bs_effort','bs_results','pr_priority','bl_startdate','bl_enddate','bl_assignees','bl_instructions','ts_startdate','ts_enddate','al_results_quantitative','al_goal_achieved','al_results','al_learnings'];
 
     private static $phases = array( 1 => 'Brainstorm',
                                     2 => 'Prioritize',
