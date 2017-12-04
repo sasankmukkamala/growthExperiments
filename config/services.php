@@ -35,4 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'app_name' => env('GOOGLE_APP_NAME'),
+        'client_id' => env('CLIENT_ID'),
+        'client_secret' => env('CLIENT_SECRET'),
+        'api_key' => env('API_KEY'),
+        'apps_domain' => env('GOOGLE_APPS_DOMAIN')
+    ]
+
 ];

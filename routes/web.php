@@ -17,7 +17,8 @@ Route::get('/', function () {
 });
 
 // Auth Routes
-Auth::routes();
+Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Experiments
 Route::get('/experiments', 'ExperimentController@index')->name('experiments');
