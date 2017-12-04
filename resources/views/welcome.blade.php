@@ -45,6 +45,10 @@
                 text-align: center;
             }
 
+            .content img {
+              max-width: 80%;
+            }
+
             .title {
                 font-size: 84px;
             }
@@ -73,6 +77,9 @@
             @endif
 
             <div class="content">
+              @if (config('view.logo'))
+                <img src="{{ config('view.logo') }}"/>
+              @endif
                 <div class="title m-b-md">
                     Growth Experiments
                 </div>
