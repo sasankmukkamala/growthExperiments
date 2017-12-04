@@ -4,6 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int bs_effort
+ * @property int bs_impact
+ * @property int bs_confidence
+ */
 class Experiment extends Model
 {
 
@@ -157,6 +162,24 @@ class Experiment extends Model
             return 'danger';
         } else {
             return 'info';
+        }
+    }
+
+    public function getScoreAttribute() {
+        return round((4 - $this->bs_effort + $this->bs_impact + $this->bs_confidence)/3, 1);
+    }
+
+    public function getScoreLabel($score) {
+        if($score < 0.5) {
+            return 'danger';
+        } else if($score < 1) {
+            return 'warning';
+        } else if ($score < 2) {
+            return 'info';
+        } else if ($score < 2.5) {
+            return 'primary';
+        } else {
+            return 'success';
         }
     }
 }
