@@ -34,7 +34,11 @@
                             @foreach ($experiments as $experiment)
                             <tr>
                                 <td>
-                                    <a href="/experiments/edit/{{ $experiment->id }}" />{{ $experiment->name }}</a>
+                                  <a href="/experiments/edit/{{ $experiment->id }}" />
+                                    {{ $experiment->name }}
+                                    <br/>
+                                    <span class="label label-{{ strtolower($experiment->getTagName($experiment->tags)) }}">{{ $experiment->getTagName($experiment->tags) }}</span>
+                                  </a>
                                 </td>
                                 <td>{{ $experiment->getPhase($experiment->phase) }}</td>
                                 <td><span class="label label-{{ $experiment->getScoreLabel($experiment->score) }}">{{ $experiment->score }}</span></td>

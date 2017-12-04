@@ -28,7 +28,7 @@
                         </div>
                         <div class="form-group">
                             {!! Form::label('Tags') !!}
-                            {!! Form::text('tags', null, array('class'=>'form-control', 'placeholder'=>'Tags', 'value'=>'{{ old("tags") }}')) !!}
+                            {!! Form::select('tags', $data['selects']['tagslist'], null, array('class'=>'form-control', 'value'=>'{{ old("tags") }}')) !!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('Current Phase') !!}

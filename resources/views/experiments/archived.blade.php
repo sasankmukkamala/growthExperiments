@@ -20,7 +20,7 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Phase</th>
-                                <th>Priority</th>
+                                <th>Score</th>
                                 <th>Creator</th>
                                 <th>Due Date</th>
                                 <th class="text-center">Progress</th>
@@ -31,10 +31,14 @@
                             @foreach ($experiments as $experiment)
                             <tr>
                                 <td>
-                                    <a href="/experiments/edit/{{ $experiment->id }}" />{{ $experiment->name }}</a>
+                                  <a href="/experiments/edit/{{ $experiment->id }}" />
+                                    {{ $experiment->name }}
+                                    <br/>
+                                    <span class="label label-{{ strtolower($experiment->getTagName($experiment->tags)) }}">{{ $experiment->getTagName($experiment->tags) }}</span>
+                                  </a>
                                 </td>
                                 <td>{{ $experiment->getPhase($experiment->phase) }}</td>
-                                <td><span class="label label-{{ $experiment->getPriorityLabel($experiment->pr_priority) }}">{{ $experiment->getPriority($experiment->pr_priority) }}</span></td>
+                                <td><span class="label label-{{ $experiment->getScoreLabel($experiment->score) }}">{{ $experiment->score }}</span></td>
                                 <td>{{ $experiment->creator->name }}</td>
                                 <td>{{ $experiment->due_date }}</td>
                                 <td>

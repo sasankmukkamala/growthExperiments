@@ -83,7 +83,8 @@ class ExperimentController extends Controller
         return view('experiments/create')->with('selects', array(   'phases' => Experiment::getPhases(),
                                                                     'percentages' => Experiment::getPercentages(),
                                                                     'efforts' => Experiment::getEfforts(),
-                                                                    'priorities' => Experiment::getPriorities()));
+                                                                    'priorities' => Experiment::getPriorities(),
+                                                                    'tagslist' => Experiment::getTagslist()));
     }
 
     /**
@@ -116,7 +117,8 @@ class ExperimentController extends Controller
                                                                 'selects' => array('phases' => Experiment::getPhases(),
                                                                                    'percentages' => Experiment::getPercentages(),
                                                                                     'efforts' => Experiment::getEfforts(),
-                                                                                    'priorities' => Experiment::getPriorities())));
+                                                                                    'priorities' => Experiment::getPriorities(),
+                                                                                    'tagslist' => Experiment::getTagslist())));
     }
 
     /**

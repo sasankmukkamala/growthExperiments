@@ -47,6 +47,12 @@ class Experiment extends Model
                                             4 => 'primary',
                                             5 => 'default');
 
+    private static $tagslist = array (  1 => "ACQUISITION",
+                                        2 => "ACTIVATION",
+                                        3 =>"REFERRAL",
+                                        4 => "RETENTION",
+                                        5 => "REVENUE");
+
     /**
      * Get the creator of the experiment.
      */
@@ -181,5 +187,21 @@ class Experiment extends Model
         } else {
             return 'success';
         }
+    }
+
+    /**
+     * Get tags array.
+     */
+    public static function getTagslist()
+    {
+        return self::$tagslist;
+    }
+
+    /**
+     * Get tag name;
+     */
+    public function getTagName($tag)
+    {
+        return self::$tagslist[$tag];
     }
 }
