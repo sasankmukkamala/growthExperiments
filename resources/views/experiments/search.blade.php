@@ -72,7 +72,7 @@
                     @endif
                 </div>
             </div>
-            {{ $experiments->links() }}
+            {{ $experiments->appends(Request::only('search'))->links() }}
         </div>
     </div>
 </div>
